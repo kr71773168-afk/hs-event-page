@@ -467,3 +467,20 @@
   line-height: 1.4;
   color: #f4f9ff99;
 }
+/* Mobile adjustments requested after the 1:1 copy (deviations from Webflow, <= 479px) */
+@media screen and (max-width: 479px) {
+  /* hero: a little more air on the sides of the intro paragraph */
+  .div-block-83 > .paragraph-46._2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* "Det lærer du på de to aftener": tighter gap between heading and paragraph */
+  .title_wrap:not(.copy):not(.copcop) {
+    grid-row-gap: 18px;
+    row-gap: 18px;
+  }
+  /* CTA after Aften 2: same air below (30px) as above */
+  .process_section-3.grey:not(._2):not(._3) .section_container > .div-block-71._5 {
+    margin-bottom: 10px;
+  }
+}

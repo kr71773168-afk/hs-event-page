@@ -641,6 +641,7 @@
   /* ---------------------------------------------------------------- */
   .bonus-section { padding: 60px 24px 50px; }
   .bonus-container { width: 100%; max-width: 1000px; margin: 0 auto; }
+  .bonus-heading { text-wrap: balance; }
   .bonus-head { margin-bottom: 28px; }
   .bonus-sub { font-size: 17px; }
   .bonus-card { padding: 36px 36px 32px; }
@@ -818,6 +819,7 @@
 
   /* bonus section: copy left, recordings right, punchline full width */
   .bonus-section { padding: 70px 40px 60px; }
+  .bonus-heading__br { display: none; }
   .bonus-card { padding: 44px 48px 40px; }
   .bonus-card__grid {
     display: grid;
