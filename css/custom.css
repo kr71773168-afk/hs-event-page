@@ -227,7 +227,7 @@
 /* Bonus section – "Tag hele opskriften med hjem" (after Hurtig opsummering) */
 .bonus-section {
   background-image: linear-gradient(#f3f3f3, #ede3d4 45%);
-  padding: 44px 0 36px;
+  padding: 44px 0 30px;
 }
 .bonus-container { margin: 0 20px; }
 .bonus-head { text-align: center; margin-bottom: 22px; }
