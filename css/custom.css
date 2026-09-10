@@ -469,10 +469,13 @@
 }
 /* Mobile adjustments requested after the 1:1 copy (deviations from Webflow, <= 479px) */
 @media screen and (max-width: 479px) {
-  /* hero: a little more air on the sides of the intro paragraph */
+  /* hero: a little more air on the sides of the intro paragraph,
+     and the same air above (to the heading) and below (to the CTA): 26px each */
   .div-block-83 > .paragraph-46._2 {
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
   /* "Det lærer du på de to aftener": tighter gap between heading and paragraph */
   .title_wrap:not(.copy):not(.copcop) {
