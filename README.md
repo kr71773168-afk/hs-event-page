@@ -2,6 +2,15 @@
 
 Statisk 1:1-kopi af `event.haandvaerkerskolen.nu` med en fungerende desktop-version.
 
+**Live:** https://kr71773168-afk.github.io/hs-event-page/ (takkeside: `/tak/`)
+
+Siden hostes på GitHub Pages fra repositoriet `kr71773168-afk/hs-event-page`.
+Hver gang der pushes til `main`, opdateres siden automatisk efter et par minutter.
+
+For at bruge jeres eget domæne (fx `event.haandvaerkerskolen.nu`): opret en fil
+`CNAME` med domænenavnet i mappens rod, og peg domænet på GitHub Pages med en
+CNAME-record til `kr71773168-afk.github.io` hos jeres DNS-udbyder.
+
 ## Filer
 
 | Fil | Indhold |
