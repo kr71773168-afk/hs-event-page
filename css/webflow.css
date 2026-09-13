@@ -1835,6 +1835,7 @@ textarea.w-input {
     font-size: 13px;
     font-weight: 400;
     line-height: 24px;
+    text-align: center;
   }
   .heading-50.sign-up.ojn {
     font-size: 13px;
@@ -2323,10 +2324,11 @@ textarea.w-input {
     grid-column-gap: 13px;
     grid-row-gap: 13px;
     border-radius: 5px;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     margin-bottom: 20px;
     display: flex;
+    text-align: center;
   }
   .step-heading._1 {
     margin-top: 15px;
