@@ -1,6 +1,7 @@
 /* Pruned Webflow stylesheet for event.haandvaerkerskolen.nu (index + tak).
    Contains only the selectors used on these pages. Mobile (<=479px)
-   rendering is preserved 1:1 - do not edit; put changes in desktop.css. */
+   rendering is preserved 1:1 - put layout changes in desktop.css.
+   Mobile typography (fonts, sizes, weights) synced with hs-event.webflow.io on 13 Sept 2026. */
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1810,10 +1811,11 @@ textarea.w-input {
     text-transform: uppercase;
     justify-content: center;
     margin-bottom: 5px;
-    font-size: 44px;
+    font-size: 32px;
     font-weight: 700;
-    line-height: 57px;
+    line-height: 42px;
     display: flex;
+    font-family: Montserrat, sans-serif;
   }
   .heading-37.black.small.bold-text-14 {
     line-height: 24px;
@@ -1830,9 +1832,12 @@ textarea.w-input {
   }
   .heading-50.sign-up {
     margin-bottom: 0;
-    font-size: 19px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 24px;
+  }
+  .heading-50.sign-up.ojn {
+    font-size: 13px;
   }
   .heading-wrapper-4.l {
     grid-column-gap: 15px;
@@ -2103,6 +2108,7 @@ textarea.w-input {
   }
   .text-block-92 {
     font-family: Montserrat, sans-serif;
+    font-weight: 300;
   }
   .div-block-201 {
     background-image: linear-gradient(#0d2c21, #06150f);
@@ -2164,7 +2170,7 @@ textarea.w-input {
   }
   .heading-style-h2-5.black {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 27px;
     line-height: 1.2;
   }
   .heading-style-h2-5.black._2 {
@@ -2217,7 +2223,8 @@ textarea.w-input {
     padding-top: 10px;
   }
   .bold-text-46 {
-    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
   }
   .members-badge {
     grid-column-gap: 10px;
@@ -2287,6 +2294,7 @@ textarea.w-input {
   }
   .bold-text-62.big {
     font-size: 34px;
+    font-weight: 700;
   }
   .code-embed-62 {
     color: #fff;
@@ -2298,15 +2306,18 @@ textarea.w-input {
     text-align: center;
     margin-bottom: 25px;
     font-family: Montserrat, sans-serif;
+    font-weight: 300;
   }
   .paragraph-46._2 {
     text-align: center;
     margin-top: 10px;
+    font-weight: 300;
   }
   .paragraph-46._2._1 {
     text-align: center;
     margin-bottom: 0;
-    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
   }
   .step-heading {
     grid-column-gap: 13px;
@@ -2793,6 +2804,8 @@ textarea.w-input {
   }
   .text-block-149, .text-block-150 {
     color: #1a4536;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
   }
   .div-block-324 {
     align-self: center;
@@ -2800,6 +2813,8 @@ textarea.w-input {
   .text-block-151 {
     font-family: Montserrat, sans-serif;
     line-height: 20px;
+    font-size: 15px;
+    font-weight: 500;
   }
   .div-block-325 {
     grid-column-gap: 10px;
@@ -2879,13 +2894,15 @@ textarea.w-input {
   }
   .text-block-152 {
     color: #fff;
-    font-family: Oswald, sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 31px;
     line-height: 31px;
+    font-weight: 700;
   }
   .paragraph-50 {
     color: #fff;
-    font-family: Merriweather, serif;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
   }
   .div-block-332 {
     justify-content: space-between;
@@ -2938,6 +2955,6 @@ textarea.w-input {
     width: 10%;
   }
   .paragraph-51 {
-    font-family: Merriweather, serif;
+    font-family: Montserrat, sans-serif;
   }
 }
