@@ -1900,8 +1900,9 @@ textarea.w-input {
     padding-bottom: 62px;
   }
   .div-block-200._0 {
-    background-image: linear-gradient(#0000, #040d09a1 7%, #06140f 12% 75%);
-    padding-top: 100px;
+    background-color: #0000;
+    background-image: linear-gradient(#0000 31%, #040d09a1 32%, #06140f 37% 75%);
+    padding-top: 351px;
   }
   .content_item.sign-up {
     width: auto;
@@ -2152,6 +2153,9 @@ textarea.w-input {
   }
   .image-93._1 {
     transform: translate(0, -91px);
+  }
+  .image-93._2 {
+    transform: translate(0);
   }
   .div-block-83 {
     grid-column-gap: 10px;

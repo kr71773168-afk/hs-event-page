@@ -263,6 +263,7 @@
     border-radius: 20px 20px 0 0;
     display: block;
   }
+  .image-93._2 { object-position: center 12%; }
   .div-block-200,
   .div-block-200._0,
   .div-block-200._2,
@@ -424,6 +425,11 @@
   /* "Det her er ikke bare teori" – testimonials                        */
   /* ---------------------------------------------------------------- */
   .title_wrap.copcop { width: 100%; grid-row-gap: 10px; grid-column-gap: 10px; }
+  .title_wrap.copcop .paragraph-46._2._1 {
+    font-family: var(--hs-font-body);
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
   .div-block-317, .div-block-317._2 {
     width: 100%;
     background-color: transparent;
