@@ -263,7 +263,7 @@
     border-radius: 20px 20px 0 0;
     display: block;
   }
-  .image-93._2 { object-position: center 12%; }
+  .image-93._2 { object-position: center center; aspect-ratio: 1 / 1; }
   .div-block-200,
   .div-block-200._0,
   .div-block-200._2,
@@ -783,6 +783,7 @@
     object-position: center 20%;
     border-radius: 20px 0 0 20px;
   }
+  .image-93._2 { object-position: center center; aspect-ratio: auto; }
   .div-block-203 {
     width: 50%;
     -webkit-backdrop-filter: blur(6px);
