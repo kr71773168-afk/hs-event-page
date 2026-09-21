@@ -2133,7 +2133,7 @@ textarea.w-input {
   .title_wrap.copy {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    background-image: linear-gradient(#ede3d4, #fff);
+    background-image: linear-gradient(#fff, #eee4d4);
     border: 1px solid #f06f1e26;
     border-radius: 15px;
     width: 95%;

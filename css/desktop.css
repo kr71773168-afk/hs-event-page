@@ -403,7 +403,7 @@
   .title_wrap.copy {
     width: 100%;
     max-width: 820px;
-    background-image: linear-gradient(#ede3d4, #fff);
+    background-image: linear-gradient(#fff, #eee4d4);
     border: 1px solid #f06f1e26;
     border-radius: 18px;
     padding: 48px 56px 44px;
