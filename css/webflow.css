@@ -2963,4 +2963,22 @@ textarea.w-input {
   .paragraph-51 {
     font-family: Montserrat, sans-serif;
   }
+
+  /* 21 Sept 2026: hero restructure (quote box moved up, video strip under hero, bigger section heading) */
+  .heading-style-h2-5.black.xl {
+    font-size: 36px;
+    line-height: 1.15;
+  }
+  .title_wrap.copy.hero-quote {
+    width: 100%;
+    margin-top: 6px;
+  }
+  .div-block-277.inter.hero-videos {
+    background-color: transparent;
+    padding-bottom: 4px;
+  }
+  .div-block-277.inter.hero-videos .collection-list-14._2 {
+    padding-top: 6px;
+    padding-bottom: 24px;
+  }
 }

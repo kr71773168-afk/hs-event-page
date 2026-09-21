@@ -50,9 +50,14 @@
   .hero-section.new,
   .hero-section.new.copy.white {
     padding: 0 20px 48px;
-    background-image: radial-gradient(circle at 50% 175%, #eee4d4, #eee4d4 73%, #00000073 96%);
+    /* the hero is taller now (quote box inside it): fade the blurred backdrop into cream below the portrait */
+    background-image: linear-gradient(180deg, #eee4d400 0, #eee4d4 430px);
     background-position: 0 0;
   }
+  .title_wrap.copy.hero-quote { margin-top: 8px; }
+  .heading-style-h2-5.black.xl { font-size: 42px; }
+  .div-block-277.inter.hero-videos { background-color: transparent; }
+  .div-block-277.inter.hero-videos .collection-list-14._2 { padding-top: 4px; padding-bottom: 36px; }
   .container_hero-2.signup { max-width: 1260px; }
   .div-block-74.new { margin-top: 0; }
   .div-block-82 { width: 100%; }
@@ -765,6 +770,8 @@
   .process_section-3,
   .process_section-3.grey { padding: 70px 40px 40px; }
   .heading-style-h2-5, .heading-style-h2-5.black { font-size: 40px; }
+  .heading-style-h2-5.black.xl { font-size: 52px; }
+  .hero-section.new.copy.white { background-image: linear-gradient(180deg, #eee4d400 0, #eee4d4 470px); }
   .paragraph-46 { font-size: 17px; }
 
   /* process cards: photo left, panel right */
