@@ -560,6 +560,11 @@
 }
 
 /* ---- Aften 1 / Aften 2 cards: intro line under the sub-headline + two-line checklist items (21 Sept 2026) ---- */
+.heading-50.sign-up, .heading-50.sign-up.ojn {
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: .01em;
+}
 .step-intro {
   text-align: center;
   margin: -8px 0 16px;
@@ -580,6 +585,7 @@
   opacity: .9;
 }
 @media (min-width: 480px) {
+  .heading-50.sign-up, .heading-50.sign-up.ojn { font-size: 21px; }
   .step-intro { margin: -6px 0 18px; font-size: 15px; }
   .step-item .step-item__title { font-size: 15px; }
   .step-item .step-item__desc { font-size: 14px; }
