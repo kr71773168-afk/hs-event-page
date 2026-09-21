@@ -21,10 +21,9 @@
   z-index: 2;
 }
 /* CTA jiggle */
+/* 21 Sept 2026: the wiggle is switched off (Kristoffer). Keyframes kept below in case it is wanted back. */
 .jiggle {
-  animation: cta-wiggle 2.2s ease-in-out infinite;
-  transform-origin: center;
-  will-change: transform;
+  animation: none;
 }
 
 @keyframes cta-wiggle {
