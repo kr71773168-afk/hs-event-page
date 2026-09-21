@@ -488,26 +488,26 @@
   }
 }
 
-/* ---- Hero headline: Permanent Marker 'sign on plywood' (design panel winner, 21 Sept 2026) ---- */
+/* ---- Hero headline: Anton, tall poster capitals in marker orange on a brush swipe (Kristoffer's pick, 21 Sept 2026) ---- */
 .hh-root {
-  --hh-s: 8.8vw;            /* 375px -> 33px lead-in; leaves ~22px air to the column edges */
+  --hh-s: calc(8.8vw * 1.395);  /* Anton is condensed: scaled so line 1 fills the same width as before (~318px at 375) */
   --hh-k: 1.5;              /* 2nd line = 1.5x on phones (one line at 320-479px) */
   --hh-ink: #c9560c;        /* deep marker orange, 3.46:1 on cream */
   --hh-cream: #eee4d4;
   padding: .12em 0 .26em;
   font-size: var(--hh-s);
 }
-@media (min-width: 480px) { .hh-root { --hh-s: min(8.4vw, 64px); --hh-k: 1.6; } }
+@media (min-width: 480px) { .hh-root { --hh-s: calc(min(8.4vw, 64px) * 1.395); --hh-k: 1.6; } }
 .hh-sign {
   margin: 0;
-  font-family: 'Permanent Marker', 'Marker Felt', Impact, 'Arial Black', sans-serif;
+  font-family: 'Anton', Impact, 'Arial Narrow Bold', 'Helvetica Neue Condensed Bold', sans-serif;
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
   text-align: center;
   color: var(--hh-ink);
   line-height: 1;
-  transform: rotate(-2.5deg);
+  transform: rotate(-1.5deg);
   transform-origin: 50% 55%;
   -webkit-font-smoothing: antialiased;
 }
@@ -520,7 +520,7 @@
 .hh-line2 {
   position: relative;
   display: inline-block;
-  margin-top: .04em;
+  margin-top: .3em;                /* room for the ring of Å under line 1 */
   padding: 0 .12em;
   font-size: calc(var(--hh-s) * var(--hh-k));
   line-height: 1.05;
