@@ -1827,7 +1827,8 @@ textarea.w-input {
     padding-top: 20px;
   }
   .hero-section.new.copy.white {
-    background-image: radial-gradient(circle at 50% 175%, #eee4d4, #eee4d4 73%, #00000073 96%);
+    /* 21 Sept 2026: pinned to the portrait height (100vw) so the cream never ends mid-headline now that the section is taller */
+    background-image: linear-gradient(180deg, #00000073 0, #00000073 14vw, #eee4d4 96vw);
     background-position: 0 0;
   }
   .heading-50.sign-up {

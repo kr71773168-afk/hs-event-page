@@ -490,8 +490,8 @@
 
 /* ---- Hero headline: Permanent Marker 'sign on plywood' (design panel winner, 21 Sept 2026) ---- */
 .hh-root {
-  --hh-s: 9.6vw;            /* 375px -> 36px lead-in */
-  --hh-k: 1.47;             /* 2nd line = 1.47x on phones (fits one line at 320-479px) */
+  --hh-s: 8.8vw;            /* 375px -> 33px lead-in; leaves ~22px air to the column edges */
+  --hh-k: 1.5;              /* 2nd line = 1.5x on phones (one line at 320-479px) */
   --hh-ink: #c9560c;        /* deep marker orange, 3.46:1 on cream */
   --hh-cream: #eee4d4;
   padding: .12em 0 .26em;
