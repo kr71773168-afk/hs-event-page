@@ -487,3 +487,75 @@
     margin-bottom: 10px;
   }
 }
+
+/* ---- Hero headline: Permanent Marker 'sign on plywood' (design panel winner, 21 Sept 2026) ---- */
+.hh-root {
+  --hh-s: 9.6vw;            /* 375px -> 36px lead-in */
+  --hh-k: 1.47;             /* 2nd line = 1.47x on phones (fits one line at 320-479px) */
+  --hh-ink: #c9560c;        /* deep marker orange, 3.46:1 on cream */
+  --hh-cream: #eee4d4;
+  padding: .12em 0 .26em;
+  font-size: var(--hh-s);
+}
+@media (min-width: 480px) { .hh-root { --hh-s: min(8.4vw, 64px); --hh-k: 1.6; } }
+.hh-sign {
+  margin: 0;
+  font-family: 'Permanent Marker', 'Marker Felt', Impact, 'Arial Black', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--hh-ink);
+  line-height: 1;
+  transform: rotate(-2.5deg);
+  transform-origin: 50% 55%;
+  -webkit-font-smoothing: antialiased;
+}
+.hh-line1 {
+  display: block;
+  font-size: var(--hh-s);
+  line-height: 1.1;
+  letter-spacing: .01em;
+}
+.hh-line2 {
+  position: relative;
+  display: inline-block;
+  margin-top: .04em;
+  padding: 0 .12em;
+  font-size: calc(var(--hh-s) * var(--hh-k));
+  line-height: 1.05;
+  vertical-align: top;
+}
+.hh-line2 .hh-txt {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  -webkit-text-stroke: .05em var(--hh-cream);   /* cream halo keeps letter feet crisp on the swipe */
+  paint-order: stroke fill;
+}
+.hh-swipe {
+  position: absolute;
+  left: 0; right: 0; bottom: -.05em;
+  width: 100%;
+  height: .46em;
+  z-index: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+/* motion: marker letters land, then the brush swipe draws itself in (all done by ~1.05s) */
+.hh-line1, .hh-line2 .hh-txt { animation: hh-in .45s cubic-bezier(.2,.7,.2,1) both; }
+.hh-line2 .hh-txt { animation-delay: .12s; }
+.hh-swipe .hh-p {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: hh-draw .7s cubic-bezier(.35,0,.15,1) .3s forwards;
+}
+.hh-swipe .hh-tail { animation-delay: .9s; animation-duration: .15s; }
+.hh-swipe .hh-b1 { animation-delay: .62s; animation-duration: .38s; }
+.hh-swipe .hh-b2 { animation-delay: .72s; animation-duration: .3s; }
+@keyframes hh-in { from { opacity: 0; transform: translateY(.18em) rotate(-1.2deg); } to { opacity: 1; transform: none; } }
+@keyframes hh-draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .hh-line1, .hh-line2 .hh-txt, .hh-swipe .hh-p { animation: none; }
+  .hh-swipe .hh-p { stroke-dashoffset: 0; }
+}
