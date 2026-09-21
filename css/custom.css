@@ -592,3 +592,11 @@
   .step-item .step-item__desc { font-size: 14px; }
 }
 
+/* "Det her er ikke bare teori": keep the subline clearly inside the green box on phones (22 Sept 2026) */
+@media screen and (max-width: 479px) {
+  .title_wrap.copcop .paragraph-46._2._1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
