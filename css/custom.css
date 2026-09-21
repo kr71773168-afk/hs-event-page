@@ -587,7 +587,6 @@
   opacity: .9;
 }
 @media (min-width: 480px) {
-  .heading-50.sign-up, .heading-50.sign-up.ojn { font-size: 30px; }
   .step-intro { margin: -6px 0 18px; font-size: 15px; }
   .step-item .step-item__title { font-size: 15px; }
   .step-item .step-item__desc { font-size: 14px; }
