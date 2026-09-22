@@ -784,3 +784,12 @@
 @media (min-width: 480px) { .hero-kicker { font-size: 17px; margin-bottom: -6px; } }
 @media (min-width: 992px) { .hero-kicker { font-size: 18px; } }
 
+/* Sticky bar: thinner, less air above and below (Tobias, 22 Sept 2026) – phones; desktop values live in desktop.css */
+@media screen and (max-width: 479px) {
+  .sticky-cta._1 { padding-top: 6px; padding-bottom: 8px; }
+  .div-block-71.sticky { padding-top: 4px; padding-bottom: 0; }
+  .sticky-cta .div-block-194.sticky { padding: 4px; }
+  .link-block-6.sticky { padding: 3px 44px 0; }
+  .bold-text-17.sticky { font-size: 19px; }
+}
+
