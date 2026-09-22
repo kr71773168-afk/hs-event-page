@@ -230,6 +230,32 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /* Review strip under the hero: prev/next arrows (desktop)             */
+  /* ------------------------------------------------------------------ */
+  function initTrustArrows() {
+    var row = document.querySelector('.hero-trust__row');
+    if (!row) return;
+    var arrows = document.querySelectorAll('.hero-trust__arrow');
+    function update() {
+      var max = row.scrollWidth - row.clientWidth - 1;
+      arrows.forEach(function (a) {
+        var dir = +a.getAttribute('data-dir');
+        a.disabled = dir < 0 ? row.scrollLeft <= 1 : row.scrollLeft >= max;
+      });
+    }
+    arrows.forEach(function (a) {
+      a.addEventListener('click', function () {
+        var card = row.querySelector('.hero-trust__card');
+        var step = card ? card.getBoundingClientRect().width + 16 : 300;
+        row.scrollBy({ left: step * +a.getAttribute('data-dir'), behavior: 'smooth' });
+      });
+    });
+    row.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
+  /* ------------------------------------------------------------------ */
   /* Meta Pixel (PageView) – same pixel as the Webflow site              */
   /* ------------------------------------------------------------------ */
   function initPixel() {
@@ -251,6 +277,7 @@
     initBeam();
     initTape();
     initVideos();
+    initTrustArrows();
     initPixel();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
