@@ -489,14 +489,14 @@
 
 /* ---- Hero headline: Anton, tall poster capitals in marker orange on a brush swipe (Kristoffer's pick, 21 Sept 2026) ---- */
 .hh-root {
-  --hh-s: calc(8.8vw * 1.395);  /* Anton is condensed: scaled so line 1 fills the same width as before (~318px at 375) */
+  --hh-s: calc(8.8vw * 1.22);   /* Anton: a size step down (22 Sept 2026) – line 1 ≈ 278px at 375 */
   --hh-k: 1.5;              /* 2nd line = 1.5x on phones (one line at 320-479px) */
   --hh-ink: #c9560c;        /* deep marker orange, 3.46:1 on cream */
   --hh-cream: #eee4d4;
   padding: .12em 0 .26em;
   font-size: var(--hh-s);
 }
-@media (min-width: 480px) { .hh-root { --hh-s: calc(min(8.4vw, 64px) * 1.395); --hh-k: 1.6; } }
+@media (min-width: 480px) { .hh-root { --hh-s: calc(min(8.4vw, 64px) * 1.22); --hh-k: 1.6; } }
 .hh-sign {
   margin: 0;
   font-family: 'Anton', Impact, 'Arial Narrow Bold', 'Helvetica Neue Condensed Bold', sans-serif;
