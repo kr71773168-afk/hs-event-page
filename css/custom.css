@@ -663,6 +663,8 @@
 .hero-trust__row::-webkit-scrollbar { display: none; }
 .hero-trust__card {
   flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
   scroll-snap-align: start;
   margin: 0;
   padding: 14px 16px 12px;
@@ -671,9 +673,10 @@
   border-radius: 14px;
   box-shadow: 0 4px 12px #00000033;
   font-family: Montserrat, sans-serif;
+  text-align: left;
 }
 .hero-trust__card img { display: block; width: 58px; height: auto; margin-bottom: 8px; }
-.hero-trust__card blockquote { margin: 0 0 8px; font-size: 13px; line-height: 1.45; font-weight: 500; }
+.hero-trust__card blockquote { flex: 1; margin: 0 0 10px; padding: 0; border: 0; font-size: 13px; line-height: 1.45; font-weight: 500; }
 .hero-trust__card figcaption { font-size: 12px; color: #f2efe5a1; }
 .hero-trust__more {
   display: block;
