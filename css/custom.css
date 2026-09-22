@@ -765,7 +765,6 @@
   .hero-trust__arrow[disabled] { opacity: .25; cursor: default; pointer-events: none; }
   .hero-trust__card blockquote { font-size: 14px; }
 }
-}
 
 /* Hero: kicker line above the headline + quotation marks around it (Tobias, 22 Sept 2026) */
 .hero-kicker {
