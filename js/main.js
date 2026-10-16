@@ -37,7 +37,7 @@
   /* ------------------------------------------------------------------ */
   function initCountdown() {
     var second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
-    var targetDate = new Date(2026, 8, 28, 19, 0, 0).getTime(); // 28. september 2026 kl. 19:00
+    var targetDate = new Date(2026, 10, 2, 19, 0, 0).getTime(); // 2. november 2026 kl. 19:00
     var pad = function (num) { return String(num).padStart(2, '0'); };
 
     var daysEl = document.getElementById('days');
