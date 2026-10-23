@@ -256,10 +256,10 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /* Meta Pixel (PageView) – same pixel as the Webflow site              */
+  /* Meta Pixel (PageView) – Online Event - Håndværkerskolen            */
   /* ------------------------------------------------------------------ */
   function initPixel() {
-    var PIXEL_ID = '1475358500068619';
+    var PIXEL_ID = '1853802775977454';
     if (!window.fbq) {
       !function (f, b, e, v, n, t, s) {
         if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
