@@ -793,3 +793,7 @@
   .bold-text-17.sticky { font-size: 19px; }
 }
 
+
+/* "Stop med / at gætte" (23 Oct 2026): begge linjer samme størrelse, tættere linjeafstand */
+.hh-line1 { font-size: calc(var(--hh-s) * var(--hh-k)); line-height: 1; }
+.hh-line2 { margin-top: .04em; }
