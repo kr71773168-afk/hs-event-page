@@ -78,7 +78,10 @@ h1 .acc{color:#F27628}
 .st.sprunget .ck{background:rgba(255,255,255,.16)}
 .st.sprunget .ck::before{width:9px;height:0;border:0;border-top:2.2px solid #fff;transform:none}
 .st.sprunget .st-linje b{color:rgba(255,255,255,.7)}
-.st.sprunget .st-linje small{color:rgba(255,255,255,.45)}
+.st.sprunget .st-linje small{display:none}
+/* sprunget over: man kan altid gå tilbage og gøre det */
+.igen{margin-left:auto;padding:6px 0 6px 10px;border:0;background:none;color:#F27628;font-family:'Barlow',sans-serif;font-weight:700;font-size:14px;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.nulstil{margin-top:14px;padding:6px 10px;border:1px dashed rgba(255,255,255,.25);border-radius:8px;background:none;color:rgba(255,255,255,.55);font-family:'Barlow',sans-serif;font-weight:600;font-size:13px;cursor:pointer}
 
 /* knapper */
 .cta{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:58px;margin-top:16px;border:0;border-radius:999px;cursor:pointer;text-decoration:none;
@@ -96,6 +99,22 @@ h1 .acc{color:#F27628}
 .valg{display:flex;flex-direction:column;gap:1px;margin-top:16px;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.10)}
 .valg a{display:flex;align-items:center;justify-content:space-between;padding:15px 16px;background:#0F241B;color:#fff;font-weight:600;font-size:16px;text-decoration:none}
 .valg a:hover{background:#13301F}
+.valg a{gap:12px}
+.valg a b{margin-right:auto;font-weight:600}
+/* små app-ikoner i sidens egne farver (ikke Googles/Apples/Microsofts logoer) */
+.lg{flex:none;width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:#fff;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 2px 8px rgba(0,0,0,.35)}
+.lg svg{width:22px;height:22px;stroke-width:2}
+/* lægges billeder/kal-google.png, kal-apple.png, kal-outlook.png ind, vises de i stedet for ikonet */
+.lg img{display:none;width:100%;height:100%;object-fit:contain}
+.lg.har-img{background:none!important;box-shadow:none}
+.lg.har-img svg{display:none}
+.lg.har-img img{display:block}
+#k-google .lg{background:linear-gradient(135deg,#C95A12,#F27628)}
+#k-ics .lg{background:linear-gradient(160deg,#FFFFFF,#E9E2D6);color:#2D5A3D}
+#k-outlook .lg{background:linear-gradient(135deg,#24503A,#2D8A4E)}
+.valg a{padding:12px 16px 12px 12px}
+@media (max-width:420px){ .valg span{display:none} }
 .valg span{color:rgba(255,255,255,.5);font-weight:500;font-size:13.5px}
 .hjaelp{margin-top:12px;padding:13px 14px;border-radius:12px;background:rgba(242,118,40,.10);box-shadow:inset 0 0 0 1px rgba(242,118,40,.35);
   font-weight:500;font-size:14.5px;line-height:1.45;color:rgba(255,255,255,.88)}
@@ -144,6 +163,9 @@ h1 .acc{color:#F27628}
   <symbol id="sms" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 8.5h8M8 12.5h5"/></g></symbol>
   <symbol id="i-gave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></g></symbol>
   <symbol id="i-folk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></g></symbol>
+  <symbol id="i-kal-plus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 13v5M9.5 15.5h5"/></g></symbol>
+  <symbol id="i-kal-fil" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 13v5M9.5 15.5 12 18l2.5-2.5"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></g></symbol>
 </svg>
 
 <main class="side" id="side">
@@ -160,7 +182,7 @@ h1 .acc{color:#F27628}
 
     <!-- TRIN 2: kalender. Knappen vælger selv efter telefon og browser (se scriptet) -->
     <section class="st" id="s-kal">
-      <div class="st-linje"><i class="ck" aria-hidden="true"></i><b></b><small></small></div>
+      <div class="st-linje"><i class="ck" aria-hidden="true"></i><b></b><small></small><button type="button" class="igen" data-igen="kal" hidden>Sæt i kalenderen ›</button></div>
       <div class="st-kort">
         <span class="nr2">Trin 2 af 4</span>
         <h2>Sæt det i kalenderen</h2>
@@ -168,9 +190,9 @@ h1 .acc{color:#F27628}
         <a class="cta" id="kal-a" href="#"><svg aria-hidden="true"><use href="#i-kalender"/></svg><span>Sæt det i kalenderen</span></a>
         <p class="note" id="kal-note" hidden></p>
         <div class="valg" id="kal-valg" hidden>
-          <a id="k-google" href="#" target="_blank" rel="noopener">Google Kalender <span>åbner Google</span></a>
-          <a id="k-ics" href="#">Apple eller Outlook <span>henter en kalenderfil</span></a>
-          <a id="k-outlook" href="#" target="_blank" rel="noopener">Outlook.com <span>åbner Outlook</span></a>
+          <a id="k-google" href="#" target="_blank" rel="noopener"><i class="lg"><svg aria-hidden="true"><use href="#i-kal-plus"/></svg><img src="/billeder/kal-google.png" alt="" onload="this.parentNode.classList.add('har-img')" onerror="this.remove()"></i><b>Google Kalender</b><span>åbner Google</span></a>
+          <a id="k-ics" href="#"><i class="lg"><svg aria-hidden="true"><use href="#i-kal-fil"/></svg><img src="/billeder/kal-apple.png" alt="" onload="this.parentNode.classList.add('har-img')" onerror="this.remove()"></i><b>Apple eller Outlook</b><span>henter en kalenderfil</span></a>
+          <a id="k-outlook" href="#" target="_blank" rel="noopener"><i class="lg"><svg aria-hidden="true"><use href="#i-web"/></svg><img src="/billeder/kal-outlook.png" alt="" onload="this.parentNode.classList.add('har-img')" onerror="this.remove()"></i><b>Outlook.com</b><span>åbner Outlook</span></a>
         </div>
         <div class="hjaelp" id="kal-hjaelp" hidden></div>
         <div class="smaa"><a id="kal-alt" href="#" target="_blank" rel="noopener" hidden></a><span class="sep" id="kal-sep" hidden>·</span><button type="button" data-spring="kal">Spring over</button></div>
@@ -182,8 +204,8 @@ h1 .acc{color:#F27628}
       <div class="st-linje"><i class="ck" aria-hidden="true"></i><b></b><small></small></div>
       <div class="st-kort">
         <span class="nr2">Trin 3 af 4</span>
-        <h2>Ordrebogs-tjekket</h2>
-        <p class="ind">3 hurtige spørgsmål, så Stefan kan tage udgangspunkt i dig. Du får svar med det samme.</p>
+        <h2>Er der et hul på vej i din ordrebog?</h2>
+        <p class="ind">Svar på 3 hurtige spørgsmål, og se det med det samme. Stefan får svarene, så han kan tage udgangspunkt i jer mandag.</p>
         <div class="q" id="q">
           <div class="q-top"><span id="q-nr">Spørgsmål 1 af 3</span><button type="button" class="tilb" id="q-tilb" hidden>‹ Tilbage</button></div>
           <div class="sp vis" data-sp="fag"><p>Hvilket fag er du i?</p><div class="valgk">
@@ -199,7 +221,7 @@ h1 .acc{color:#F27628}
 
     <!-- TRIN 4: Facebook-gruppen. Sidst, fordi det sender folk væk fra siden. GRUPPE_URL tom = trinnet forsvinder -->
     <section class="st" id="s-gruppe">
-      <div class="st-linje"><i class="ck" aria-hidden="true"></i><b></b><small></small></div>
+      <div class="st-linje"><i class="ck" aria-hidden="true"></i><b></b><small></small><button type="button" class="igen" data-igen="gruppe" hidden>Gå med ›</button></div>
       <div class="st-kort">
         <span class="nr2">Trin 4 af 4</span>
         <h2>Gå med i Facebook-gruppen</h2>
@@ -216,6 +238,8 @@ h1 .acc{color:#F27628}
     <div class="husk"><svg aria-hidden="true"><use href="#i-gave"/></svg><p><b>Husk at være med live.</b> Det er kun dem, der er med live, der får optagelsen og muligheden for en gratis hjemmeside.</p></div>
 
     <p class="bund">Håndværkerskolen</p>
+    <!-- kun i forhåndsvisningen (ikke på haandvaerkerskolen.nu): start forfra -->
+    <button type="button" class="nulstil" id="nulstil" hidden>Nulstil forhåndsvisning</button>
   </div>
 </main>
 
@@ -244,9 +268,9 @@ h1 .acc{color:#F27628}
   /* ===== trinene. Gemmes i sessionStorage, så en genindlæsning (fx når man kommer tilbage fra kalenderen) ikke starter forfra ===== */
   var TRIN=['kal','tjek','gruppe'], NAVN={kal:'Kalender',tjek:'Ordrebogs-tjekket',gruppe:'Facebook-gruppen'};
   if(!GRUPPE_URL){ TRIN.pop(); document.getElementById('s-gruppe').remove(); } else document.getElementById('gr-a').href=GRUPPE_URL;
-  var N=TRIN.length+1, st={};
-  try{ st=JSON.parse(sessionStorage.getItem('hs_trin')||'{}')||{}; }catch(e){}
-  function gem(){ try{ sessionStorage.setItem('hs_trin',JSON.stringify(st)); }catch(e){} }
+  var NOEGLE='hs_trin2', N=TRIN.length+1, st={};
+  try{ st=JSON.parse(sessionStorage.getItem(NOEGLE)||'{}')||{}; }catch(e){}
+  function gem(){ try{ sessionStorage.setItem(NOEGLE,JSON.stringify(st)); }catch(e){} }
   var seg=document.getElementById('seg'); for(var i=0;i<N;i++) seg.appendChild(document.createElement('i'));
   var ro=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -254,14 +278,15 @@ h1 .acc{color:#F27628}
     var akt=null, n=1;
     TRIN.forEach(function(k,i){ var el=document.getElementById('s-'+k);
       el.classList.remove('aktiv','klar','sprunget'); el.querySelector('.nr2').textContent='Trin '+(i+2)+' af '+N;
+      var ig=el.querySelector('.igen'); if(ig) ig.hidden=st[k]!=='skip';
       if(st[k]){ n++; el.classList.add('klar'); if(st[k]==='skip') el.classList.add('sprunget');
         el.querySelector('.st-linje b').textContent=NAVN[k]; el.querySelector('.st-linje small').textContent=st[k]==='skip'?'sprunget over':'klaret'; }
       else if(!akt){ akt=el; el.classList.add('aktiv'); } });
     [].forEach.call(seg.children,function(s,i){ var v=i===0?true:st[TRIN[i-1]]; s.className=v==='skip'?'skip':(v?'ja':''); });
-    var frem=document.getElementById('frem');
-    frem.classList.toggle('alt',!akt);
-    document.getElementById('frem-h').textContent=akt?'Gør dig klar til mandag':'Du er klar til mandag';
-    document.getElementById('frem-t').textContent=akt?(n+' af '+N+' klaret'):'Alt klaret';
+    var frem=document.getElementById('frem'), m=1+TRIN.filter(function(k){ return st[k]&&st[k]!=='skip'; }).length;
+    frem.classList.toggle('alt',m===N);
+    document.getElementById('frem-h').textContent=m===N?'Du er klar til mandag':(akt?'Gør dig klar til mandag':'Næsten klar til mandag');
+    document.getElementById('frem-t').textContent=m===N?'Alt klaret':(m+' af '+N+' klaret');
     if(!akt&&VIDEO_URL){ var v=document.getElementById('vid'); if(!v.firstChild){ v.classList.add('vis');
       v.innerHTML=/\.mp4(\?|$)/.test(VIDEO_URL)?'<video src="'+VIDEO_URL+'" controls playsinline preload="metadata"></video>':'<iframe src="'+VIDEO_URL+'" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" title="Velkomst fra Stefan"></iframe>'; } }
     if(rul){ var maal=akt?akt.querySelector('.st-kort'):frem, r=maal.getBoundingClientRect();
@@ -343,6 +368,17 @@ h1 .acc{color:#F27628}
 
   /* ===== TRIN 4: Facebook-gruppen ===== */
   if(GRUPPE_URL) document.getElementById('gr-a').addEventListener('click',function(){ spor('FacebookGruppe'); setTimeout(function(){ klar('gruppe'); },600); });
+
+  /* sprunget over → gå tilbage og gør det */
+  [].forEach.call(document.querySelectorAll('[data-igen]'),function(b){ b.addEventListener('click',function(){ var k=b.dataset.igen;
+    delete st[k]; gem(); HJ.hidden=true; spor('TrinGenaabnet',{trin:k}); vis(true); }); });
+
+  /* forhåndsvisning: nulstil */
+  if(!/(^|\.)haandvaerkerskolen\.nu$/i.test(location.hostname)){ var nb=document.getElementById('nulstil'); nb.hidden=false;
+    nb.addEventListener('click',function(){ st={}; gem(); qi=0; svar={}; HJ.hidden=true;
+      [].forEach.call(document.querySelectorAll('.valgk button'),function(x){ x.setAttribute('aria-pressed','false'); });
+      document.getElementById('q').hidden=false; document.getElementById('res').classList.remove('vis'); visQ();
+      vis(false); window.scrollTo({top:0,behavior:'auto'}); }); }
 
   vis(false);
 })();

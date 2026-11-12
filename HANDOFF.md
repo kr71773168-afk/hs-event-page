@@ -64,19 +64,20 @@ Titlen er en arbejdstitel. Sæt fx:
 - Serveres på `/tak` (rewrite i Vercel), `noindex`.
 - Læser `sessionStorage.hs_tak` (`fornavn`, `telefon`, `event_id`), som formularen gemmer lige før videresendelsen. Hilser med fornavn og viser nummeret i SMS-linjen.
 - Opbygning: ét trin ad gangen. Statuslinje "1 af 4 klaret" (tilmeldt = trin 1). Kun det aktive trin vises; klarede trin bliver til én linje. Rækkefølge: Trin 2 kalender, Trin 3 ordrebogs-tjek (ét spørgsmål ad gangen, svar med det samme), Trin 4 Facebook-gruppen. Kalender og gruppe kan springes over. Når alt er klaret: "Du er klar til mandag" + Stefan-video (hvis `VIDEO_URL`). "Husk at være med live" står altid nederst.
-- Fremskridt gemmes i `sessionStorage.hs_trin`, så siden ikke starter forfra, hvis in-app-browseren genindlæser den.
+- Fremskridt gemmes i `sessionStorage.hs_trin2`, så siden ikke starter forfra, hvis in-app-browseren genindlæser den. Et trin, man har sprunget over, kan åbnes igen fra linjen ("Sæt i kalenderen ›" / "Gå med ›").
+- Knappen "Nulstil forhåndsvisning" vises kun, når siden ikke ligger på `haandvaerkerskolen.nu`. Ligger den på et andet domæne, så ret tjekket nederst i scriptet.
 - **Kalender vælges efter enhed** (vigtigt, fordi trafikken kommer fra Meta-ads og åbner i Facebooks/Instagrams in-app-browser, hvor .ics ikke virker på iPhone):
   - iPhone i Safari: `/kalender.ics` (iPhone-kalenderen åbner direkte).
   - iPhone i Facebook/Instagram/Chrome: knappen åbner `x-safari-https://<domæne>/kalender?fra=app` (Safari, iOS 17+). Åbner Safari ikke inden 2,5 sek., vises en hjælpetekst (••• → åbn i Safari, eller kalender-linket i SMS'en).
   - Android: Google Kalender. Inde i Facebook/Instagram via `intent://…;package=com.android.chrome` (åbner i Chrome, hvor man er logget ind på Google).
-  - Computer: Google / Apple-Outlook (.ics) / Outlook.com.
+  - Computer: Google / Apple-Outlook (.ics) / Outlook.com. Hver række har et ikon. Lægges `billeder/kal-google.png`, `billeder/kal-apple.png` og `billeder/kal-outlook.png` ind (kvadratiske, mindst 80 × 80 px), vises de automatisk i stedet for de indbyggede ikoner. Det gælder også `kalender.html`.
 - Indstillinger øverst i scriptet:
   - `VIDEO_URL`: Stefans velkomstvideo (YouTube-embed eller .mp4). Tom = skjult.
   - `GRUPPE_URL`: Facebook-gruppen. Tom = trin 4 forsvinder (står som `'#'` i forhåndsvisningen, så sæt den eller tøm den).
   - `SPOERG_TIL`: fx `/api/tjek`. Får `POST {telefon, event_id, fag, ansatte, booket}`, når de 3 spørgsmål er besvaret. Gem på GHL-kontakten (custom fields), så SMS-bot'en kan bruge svarene. Tom = intet sendes.
   - `KALENDER_SIDE`: sæt til `'/kalender'`. `ICS_FIL`: sæt til `'/kalender.ics'`.
   - `SMS_KALENDER`: `true` = hjælpeteksten nævner kalender-linket i SMS'en. Sæt `false`, hvis bekræftelses-SMS'en ikke får linket.
-- Pixel base code skal ind her. Events: `trackCustom AddToCalendar {metode}`, `OrdrebogsTjek {fag, ansatte, booket}`, `FacebookGruppe`, `TrinSprunget {trin}`, `TakkesideFaerdig`. Clarity får de samme navne som events.
+- Pixel base code skal ind her. Events: `trackCustom AddToCalendar {metode}`, `OrdrebogsTjek {fag, ansatte, booket}`, `FacebookGruppe`, `TrinSprunget {trin}`, `TrinGenaabnet {trin}`, `TakkesideFaerdig`. Clarity får de samme navne som events.
 - Lead fyres i formularen lige før videresendelsen. Hvis det giver tab af events, så flyt browser-Lead til takkesiden med `event_id` fra `hs_tak`. Undgå dobbelt Lead.
 
 ## 6. Kalendersiden `/kalender` (`kalender.html` + `kalender.ics`)
