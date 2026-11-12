@@ -19,16 +19,29 @@ GitHub Pages er stadig slået til med samme domæne, så gamle
 
 ## Filer
 
-| Fil | Indhold |
+| Sti | Fil | Indhold |
+| --- | --- | --- |
+| `/` | `index.html` | Eventsiden til 30. november 2026. CSS og JS ligger i filen. |
+| `/tak` | `tak.html` | Takkesiden til 30. nov (nedtælling, "Sæt i kalenderen"). |
+| – | `billeder/` | Billeder til den nye side. |
+| `/api/tilmeld` | `api/tilmeld.js` | Serverfunktion: formular → GHL (upsert + tag `event-2026-11-30`) og Lead → Meta CAPI. |
+| `/okt` | `okt/index.html` | Den gamle eventside (2.–3. nov). Agencyflow-formularen ligger stadig her. Nødløsning. |
+| `/tak-okt` | `tak-okt.html` | Den gamle takkeside. |
+| – | `okt/css`, `okt/js`, `okt/assets` | Den gamle sides filer. Stierne er absolutte (`/okt/...`). |
+| – | `HANDOFF.md` | Overdragelsesnoter til den nye side (kommer ikke med på den offentlige side). |
+
+`vercel.json` slår `cleanUrls` til, så `tak.html` ligger på `/tak` osv.
+
+## Env-variabler i Vercel (kræves af `/api/tilmeld`)
+
+| Navn | Indhold |
 | --- | --- |
-| `index.html` | Event-siden. Samme DOM-struktur som Webflow-siden (minus `none`-elementer). |
-| `tak.html`, `tak/index.html` | Takkesiden. Virker på både `/tak` og `/tak/`. |
-| `css/webflow.css` | Beskåret Webflow-stylesheet (kun de klasser siden bruger). Styrer mobil (≤ 479 px) 1:1. **Rør ikke** – ret i `desktop.css`. |
-| `css/custom.css` | Sidens egne embeds: CTA-beam, jiggle-animation, målebånd. |
-| `css/desktop.css` | Alt layout for ≥ 480 px (tablet) og ≥ 992 px (desktop). Mobil er ikke berørt. |
-| `js/main.js` | Modal (åbn/luk), countdown, logo-marquee, CTA-beam, målebånd, Meta Pixel. |
-| `assets/` | Alle billeder (hentet fra Webflow-CDN). `og-image.png` er delebilledet. |
-| `assets/yt/` | Lodrette thumbnails til interview-videoerne (YouTube Shorts). |
+| `GHL_TOKEN` | GHL Private Integration token (contacts read/write) |
+| `GHL_LOCATION_ID` | Location ID for sub-accountet |
+| `META_CAPI_TOKEN` | Conversions API token til pixel `1853802775977454` |
+| `META_TEST_EVENT_CODE` | Valgfri. Kun mens der testes i Events Manager |
+
+Mangler GHL-variablerne, svarer funktionen 500, og formularen viser "Noget gik galt".
 
 ## Interview-videoer
 
@@ -63,5 +76,5 @@ npx vercel --scope tfcx deploy --prod --yes
 
 `.vercelignore` holder README, `CNAME` og andre repo-filer ude af den offentlige side.
 
-Tilmeldingsformularen er den samme eksterne agencyflow-formular (iframe) som på
-Webflow-siden, så tilmeldinger lander samme sted som før.
+Den nye side bruger sin egen formular, der poster til `/api/tilmeld`. Den gamle side på `/okt`
+bruger stadig agencyflow-formularen (iframe). Dens videresendelse er sat op i GHL.

@@ -1,176 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
 <head>
-<meta charset="utf-8"/>
-<title>Tak</title>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/6a15de2a01f4e577e7fee237_favicon-32x32.png"/>
-<link rel="icon" type="image/png" sizes="48x48" href="assets/6a15de2a01f4e577e7fee234_favicon-32x32.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="assets/6a15de2a36fa7c42e4ec2edc_favicon-32x32.png"/>
-<link rel="icon" type="image/png" sizes="192x192" href="assets/6a15de2a0312a21507312eea_favicon-32x32.png"/>
-<link rel="icon" type="image/png" sizes="512x512" href="assets/6a15de2a1ea45b065c39f08c_favicon-32x32.png"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet"/>
-<link href="css/webflow.css" rel="stylesheet"/>
-<link href="css/custom.css" rel="stylesheet"/>
-<link href="css/desktop.css" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Du er tilmeldt – Håndværkerskolen</title>
+<!-- Meta Pixel: Online Event - Håndværkerskolen -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1853802775977454');fbq('trackSingle','1853802775977454','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1853802775977454&ev=PageView&noscript=1" alt=""></noscript>
+<link rel="icon" type="image/png" sizes="32x32" href="/billeder/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/billeder/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Anton&family=Archivo:wdth,wght@112,800&display=swap" rel="stylesheet">
+<style>
+/* TAKKESIDEN. Opgaven er at få folk til at møde op live: kun dem, der er med live, får optagelsen og bonussen.
+   1) Ro: "Du er tilmeldt", ikke "næsten". 2) Én handling: læg det i kalenderen. At beslutte hvornår og hvor
+   gør, at man faktisk gør det (Gollwitzer 1999; Milkman m.fl. 2011). 3) Hvad sker der nu, så ingen sidder og venter
+   på et link, de ikke ved hvornår kommer (26 af 114 SMS-svar handlede om link og adgang). 4) En grund til at møde op */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#06140F;color:#fff;font-family:'Barlow',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+svg{display:block}
+.side{position:relative;overflow:hidden;isolation:isolate;min-height:100vh;padding:44px 18px 48px;text-align:center}
+.side::before{content:"";position:absolute;left:50%;top:-120px;width:720px;height:520px;transform:translateX(-50%);z-index:-1;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(45,90,61,.55),rgba(45,90,61,0))}
+.kol{max-width:520px;margin:0 auto}
+.ok{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(135deg,#C95A12,#F27628);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 0 8px rgba(242,118,40,.14);animation:ind .5s cubic-bezier(.3,1.5,.5,1) both}
+.ok svg{width:32px;height:32px;color:#fff}
+@keyframes ind{from{transform:scale(.6);opacity:0}}
+h1{font-family:'Anton',sans-serif;font-weight:400;font-size:40px;line-height:1.12;letter-spacing:.3px;text-transform:uppercase}
+h1 .acc{color:#F27628}
+.sub{margin-top:10px;font-weight:600;font-size:16px;color:rgba(255,255,255,.72)}
+.nr{margin-top:6px;font-weight:500;font-size:14.5px;color:rgba(255,255,255,.6)}
+.nr b{color:#fff;font-weight:700}
+
+/* nedtællingen */
+.ned{display:flex;justify-content:center;gap:8px;margin:28px auto 0}
+.ned div{width:72px;padding:12px 0 10px;border-radius:12px;background:linear-gradient(160deg,#10271D 0%,#0A1A14 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.09)}
+.ned b{display:block;font-family:'Anton',sans-serif;font-weight:400;font-size:32px;line-height:1;font-variant-numeric:tabular-nums}
+.ned small{display:block;margin-top:6px;font-weight:700;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.ned-t{margin-top:10px;font-weight:500;font-size:13.5px;color:rgba(255,255,255,.55)}
+.live{display:none;margin-top:28px;padding:14px 16px;border-radius:12px;background:rgba(242,118,40,.12);box-shadow:inset 0 0 0 1px rgba(242,118,40,.35);font-weight:600;font-size:16px}
+.igang .ned,.igang .ned-t{display:none}
+.igang .live{display:block}
+
+/* kalender-knappen og valgene */
+.cta{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:58px;margin:30px 0 0;border:0;border-radius:999px;cursor:pointer;
+  background:linear-gradient(90deg,#C95A12 0%,#F27628 100%);color:#fff;font-family:'Archivo',sans-serif;font-stretch:112%;font-weight:800;font-size:18px;letter-spacing:.4px;text-transform:uppercase;
+  -webkit-tap-highlight-color:transparent}
+.cta svg{width:22px;height:22px}
+.cta::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;animation:kpuls 2s cubic-bezier(.2,.6,.3,1) infinite}
+@keyframes kpuls{0%{box-shadow:0 0 0 0 rgba(242,118,40,.5)}75%,100%{box-shadow:0 0 0 13px rgba(242,118,40,0)}}
+.valg{display:none;margin-top:10px;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.10);gap:1px;flex-direction:column}
+.valg.aaben{display:flex}
+.valg a,.valg button{display:flex;align-items:center;justify-content:space-between;width:100%;padding:15px 16px;border:0;background:#0F241B;color:#fff;
+  font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;text-decoration:none;cursor:pointer;text-align:left}
+.valg span{color:rgba(255,255,255,.5);font-weight:500;font-size:13.5px}
+.cal-ok{display:none;margin-top:10px;font-weight:600;font-size:14px;color:#9FD7AE}
+
+/* sådan foregår det */
+.trin{list-style:none;margin:40px 0 0;padding:0;text-align:left}
+.trin-h{margin-top:44px;font-family:'Anton',sans-serif;font-weight:400;font-size:26px;line-height:1.16;letter-spacing:.3px;text-transform:uppercase;text-align:center}
+.trin li{position:relative;display:flex;gap:14px;padding:0 0 22px}
+.trin li:not(:last-child)::before{content:"";position:absolute;left:19px;top:40px;bottom:2px;width:2px;background:rgba(255,255,255,.1)}
+.trin i{flex:none;width:40px;height:40px;border-radius:50%;background:rgba(242,118,40,.12);display:flex;align-items:center;justify-content:center;color:#F27628}
+.trin i svg{width:20px;height:20px}
+.trin small{display:block;font-weight:700;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#F27628}
+.trin p{margin-top:3px;font-weight:500;font-size:16px;line-height:1.4;color:rgba(255,255,255,.86)}
+.trin p b{color:#fff;font-weight:700}
+
+/* husk og tip */
+.husk{display:flex;gap:14px;align-items:flex-start;margin-top:14px;padding:16px;border-radius:14px;text-align:left;
+  background:linear-gradient(160deg,#10271D 0%,#0A1A14 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.husk svg{flex:none;width:24px;height:24px;color:#F27628}
+.husk p{font-weight:500;font-size:15.5px;line-height:1.42;color:rgba(255,255,255,.82)}
+.husk p b{color:#fff;font-weight:700}
+.husk+.husk{margin-top:10px}
+.bund{margin-top:34px;font-weight:500;font-size:13px;color:rgba(255,255,255,.45)}
+@media (min-width:768px){ .side{padding-top:80px} h1{font-size:52px} .ned div{width:86px} .ned b{font-size:38px} }
+@media (prefers-reduced-motion:reduce){ .ok{animation:none} .cta::after{animation:none} }
+</style>
 </head>
-<body class="body">
-<div class="trustpilot-horizontal">
-<img src="assets/69c243bead651da063dac836_Design_uden_navn_93_.avif" loading="lazy" width="224" sizes="224px" alt="" srcset="assets/69c243bead651da063dac836_Design_uden_navn_93_-p-500.avif 500w, assets/69c243bead651da063dac836_Design_uden_navn_93_-p-800.avif 800w, assets/69c243bead651da063dac836_Design_uden_navn_93_.avif 2010w"/>
-</div>
-<div class="heading-tak">
-<h1 class="heading-58">Din plads er næsten reserveret</h1>
-<div class="text-block-144">Der mangler ét skridt, før din plads er sikret</div>
-</div>
-<div class="section-steps tak">
-<div class="container">
-<div class="steps-wrapper tak">
-<div class="step-box tak">
-<div class="div-block-299">
-<h3 class="heading-59">Deltag i vores gruppe</h3>
-<div class="text-block-145">Op til eventet deler vi vigtig viden og information i gruppen, som du skal bruge for at kunne deltage.</div>
-<div class="div-block-300 tak">
-<div class="div-block-301">
-<a href="https://www.facebook.com/groups/1145511548162547" class="link-block-9 _2 w-inline-block">
-<div class="div-block-302">
-<div class="text-block-146">
-<strong class="bold-text-65">Deltag i vores event gruppe</strong>
-</div>
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="event-badge step tak">
-<div class="text-size-medium-8 _2">
-<strong class="bold-text-67">Trin 1<br/>
-</strong>
-</div>
-<div class="div-block-303">
-</div>
-</div>
-</div>
-<div class="step-box tak _2">
-<div class="event-badge step tak">
-<div class="text-size-medium-8 _2">
-<strong class="bold-text-67">Trin 2<br/>
-</strong>
-</div>
-<div class="div-block-303">
-</div>
-</div>
-<div class="div-block-299">
-<h3 class="heading-59">Hent din billet</h3>
-<div class="text-block-145">Sidste trin er at hente din billet før du er klar til at deltage på foredraget</div>
-<div class="div-block-300 tak">
-<div class="div-block-301">
-<a href="https://m.me/1133610546491794?ref=w53648417" class="link-block-9 _2 _1 w-inline-block">
-<div class="code-embed-65 w-embed">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="currentColor">
-<path d="M23.9568 10.7593L16.2294 12.8298C15.7494 12.9584 15.4644 13.452 15.593 13.9321C15.7217 14.4121 16.2152 14.6971 16.6953 14.5685L24.4227 12.4979C24.9028 12.3693 25.1877 11.8757 25.0591 11.3957C24.9305 10.9156 24.4369 10.6306 23.9568 10.7593Z"/>
-<path d="M22.2542 15.5709L17.3183 16.8935C16.8382 17.0221 16.5533 17.5157 16.6819 17.9957C16.8105 18.4758 17.3041 18.7608 17.7842 18.6321L22.7201 17.3096C23.2001 17.1809 23.4851 16.6874 23.3565 16.2073C23.2278 15.7272 22.7343 15.4423 22.2542 15.5709Z"/>
-<path d="M24.769 3.59801L2.20501 9.64402C0.49049 10.1034 -0.531539 11.8722 -0.071876 13.5877L0.52729 15.8238C0.750392 16.6564 1.52373 17.2205 2.40916 17.1945C3.53775 17.1602 4.53115 17.9003 4.82439 18.9947C5.11738 20.0881 4.62738 21.2267 3.63215 21.7626C2.85303 22.1815 2.46533 23.0567 2.68843 23.8893L3.2876 26.1254C3.747 27.8399 5.51579 28.862 7.23127 28.4023L29.7953 22.3563C31.5098 21.8969 32.5328 20.1278 32.0731 18.4123L28.7137 5.87463C28.253 4.15941 26.4836 3.1386 24.769 3.59801ZM30.3335 18.8785C30.5362 19.6348 30.0857 20.415 29.3294 20.6176L15.1332 24.4215L14.5897 22.393C14.4611 21.913 13.9675 21.628 13.4874 21.7566C13.0074 21.8853 12.7224 22.3788 12.851 22.8589L13.3945 24.8874L6.7654 26.6636C6.00908 26.8663 5.22892 26.4159 5.02626 25.6595L4.4862 23.3465C6.21896 22.4143 7.07319 20.4327 6.56306 18.5288C6.05267 16.624 4.32208 15.335 2.26596 15.3579L1.66679 13.1218C1.46414 12.3655 1.91456 11.5853 2.67088 11.3827L9.301 9.60615L9.84452 11.6346C9.97315 12.1147 10.4667 12.3996 10.9468 12.271C11.4269 12.1424 11.7118 11.6488 11.5832 11.1687L11.0397 9.14028L25.2349 5.33667C25.9912 5.13402 26.7714 5.58445 26.974 6.34077L30.3335 18.8785Z"/>
-<path d="M11.4787 14.2715C11.0054 14.3983 10.7155 14.9005 10.8423 15.3738L11.8465 19.1216C11.9734 19.5949 12.4755 19.8848 12.9488 19.758C13.4318 19.6286 13.712 19.129 13.5852 18.6557L12.581 14.9079C12.4542 14.4346 11.9617 14.1421 11.4787 14.2715Z"/>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tjek" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-kalender" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></g></symbol>
+  <symbol id="sms" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 8.5h8M8 12.5h5"/></g></symbol>
+  <symbol id="i-ur" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol>
+  <symbol id="i-afspil-cirkel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4V8z"/></g></symbol>
+  <symbol id="i-gave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></g></symbol>
+  <symbol id="skaerme" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"/><path d="M10 19v-3.96 3.15"/><path d="M7 19h5"/><rect width="6" height="10" x="16" y="12" rx="2"/></g></symbol>
 </svg>
-</div>
-<div class="div-block-302">
-<div class="text-block-146">
-<strong class="bold-text-65">Hent billet</strong>
-</div>
-</div>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="process_card tak">
-<div class="process_details-2">
-<div class="content_item sign-up">
-<img width="828" sizes="(max-width: 767px) 100vw, 828px" alt="" src="assets/69c8019651b59a69327475f0_Gemini_Generated_Image_m8u087m8u087m8u0.avif" loading="lazy" srcset="assets/69c8019651b59a69327475f0_Gemini_Generated_Image_m8u087m8u087m8u0-p-500.avif 500w, assets/69c8019651b59a69327475f0_Gemini_Generated_Image_m8u087m8u087m8u0.avif 1376w" class="image-106"/>
-<img src="assets/69bb5f46b3118c4d09965562_ChatGPT_Image_19._mar._2026_03.27.06.avif" loading="lazy" width="130" sizes="130px" alt="" srcset="assets/69bb5f46b3118c4d09965562_ChatGPT_Image_19._mar._2026_03.27.06-p-500.avif 500w, assets/69bb5f46b3118c4d09965562_ChatGPT_Image_19._mar._2026_03.27.06.avif 1536w" class="image-105"/>
-<img src="assets/69bb61b4676ea4e6247b4441_ChatGPT_Image_19._mar._2026_03.38.27.avif" loading="lazy" width="130" alt="" class="image-105 _2"/>
-<div class="div-block-307 ga">
-<div class="div-block-304">
-</div>
-<div class="div-block-309 ga">
-<div class="div-block-311">
-<div class="event-badge step">
-<div class="div-block-306">
-<div class="code-embed-67 w-embed">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<!-- bow -->
-<path d="M12 6c0-2-2-3-3-2s0 3 3 4"/>
-<path d="M12 6c0-2 2-3 3-2s0 3-3 4"/>
-<!-- lid -->
-<rect x="3" y="7" width="18" height="4" rx="1"/>
-<!-- box -->
-<rect x="5" y="11" width="14" height="10" rx="1"/>
-<!-- ribbon -->
-<line x1="12" y1="7" x2="12" y2="21"/>
-</svg>
-</div>
-</div>
-<div class="text-size-medium-8 _2">
-<strong class="bold-text-67">Kun for live-deltagere<br/>
-</strong>
-</div>
-<div class="div-block-303">
-</div>
-</div>
-<div class="div-block-312">
-<div class="text-block-147">#3</div>
-</div>
-</div>
-<div class="line">
-</div>
-<div>
-<div class="step-heading">
-<div class="div-block-310">
-<div class="code-embed-66 w-embed">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" fill="none">
-<circle cx="25" cy="25" r="8.5" stroke="" stroke-width="1.8"/>
-<path d="M8.7 12.2L11 14.5L15.3 10.2" stroke="currentcolor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</div>
-</div>
-<h3 class="heading-60 sign-up">Vær med live – og få muligheden for en gratis hjemmeside til en værdi af 10.000 kr.<br/>
-</h3>
-</div>
-<div class="div-block-305">
-<div class="div-block-308">
-<div class="text-block-148">Alle, der er med live den 2. og 3. november kl. 19:00, får optagelserne fra begge aftener bagefter – og muligheden for en gratis hjemmeside til en værdi af 10.000 kr.<br/>
-</div>
-</div>
-</div>
-</div>
-<div class="div-block-313">
-<div class="event-badge step _1">
-<div class="text-size-medium-8 _2">
-<strong class="bold-text-67">Optagelser fra begge aftener<br/>
-</strong>
-</div>
-</div>
-<div class="event-badge step _1">
-<div class="text-size-medium-8 _2">
-<strong class="bold-text-67">Mulighed for gratis hjemmeside<br/>
-</strong>
-</div>
-</div>
-</div>
-</div>
-<img width="164" sizes="164px" alt="" src="assets/69b96ec7c4b036c19f496d4b_Design_uden_navn_92_.avif" loading="lazy" srcset="assets/69b96ec7c4b036c19f496d4b_Design_uden_navn_92_-p-500.avif 500w, assets/69b96ec7c4b036c19f496d4b_Design_uden_navn_92_.avif 1000w" class="image-104"/>
-</div>
-</div>
-</div>
-<div class="centre_block">
-</div>
-</div>
-</div>
-</div>
-<script src="js/main.js">
+
+<main class="side" id="side">
+  <div class="kol">
+    <div class="ok" aria-hidden="true"><svg><use href="#tjek"/></svg></div>
+    <h1 id="h">Du er <span class="acc">tilmeldt</span></h1>
+    <p class="sub">Mandag 30. november kl. 19:00 · Online</p>
+    <p class="nr" id="nr" hidden>Linket kommer på SMS til <b id="nr-t"></b></p>
+
+    <div class="ned" id="ned" aria-label="Tid til eventet starter">
+      <div><b id="n-d">–</b><small>dage</small></div>
+      <div><b id="n-t">–</b><small>timer</small></div>
+      <div><b id="n-m">–</b><small>min</small></div>
+      <div><b id="n-s">–</b><small>sek</small></div>
+    </div>
+    <p class="ned-t">til Stefan går i gang</p>
+    <p class="live">Vi er i gang nu. Tjek din SMS for linket.</p>
+
+    <button class="cta" type="button" id="kal" aria-expanded="false" aria-controls="valg"><svg aria-hidden="true"><use href="#i-kalender"/></svg>Sæt det i kalenderen</button>
+    <div class="valg" id="valg">
+      <a id="k-google" href="#" target="_blank" rel="noopener">Google Kalender <span>åbner Google</span></a>
+      <button type="button" id="k-ics">Apple eller Outlook <span>henter en kalenderfil</span></button>
+      <a id="k-outlook" href="#" target="_blank" rel="noopener">Outlook.com <span>åbner Outlook</span></a>
+    </div>
+    <p class="cal-ok" id="cal-ok">Godt. Så glemmer du det ikke.</p>
+
+    <!-- MANGLER fra Kristoffer: præcise tidspunkter for påmindelse og link-SMS i flowet. Indtil da står der kun det, der er sikkert -->
+    <h2 class="trin-h">Sådan foregår det</h2>
+    <ol class="trin">
+      <li><i><svg aria-hidden="true"><use href="#sms"/></svg></i><div><small>Nu</small><p>Du får en <b>bekræftelse på SMS</b>.</p></div></li>
+      <li><i><svg aria-hidden="true"><use href="#i-ur"/></svg></i><div><small>Inden eventet</small><p>Vi minder dig om det på <b>SMS og mail</b>.</p></div></li>
+      <li><i><svg aria-hidden="true"><use href="#sms"/></svg></i><div><small>Mandag, inden vi starter</small><p><b>Linket kommer på SMS.</b> Det åbner i din browser, så du skal ikke downloade noget.</p></div></li>
+      <li><i><svg aria-hidden="true"><use href="#i-afspil-cirkel"/></svg></i><div><small>Kl. 19:00</small><p>Stefan går i gang. Du er ikke på kamera, du ser bare med.</p></div></li>
+    </ol>
+
+    <div class="husk"><svg aria-hidden="true"><use href="#i-gave"/></svg><p><b>Husk at være med live.</b> Det er kun dem, der er med live, der får optagelsen og muligheden for en gratis hjemmeside.</p></div>
+    <div class="husk"><svg aria-hidden="true"><use href="#skaerme"/></svg><p><b>Se gerne med fra computeren.</b> Så får du bedst overblik over tallene.</p></div>
+
+    <p class="bund">Håndværkerskolen</p>
+  </div>
+</main>
+
+<script>
+(function(){
+  /* mandag 30. november 2026 kl. 19:00 dansk tid (vintertid, UTC+1) = 18:00 UTC. Ca. 1 time */
+  var START=Date.UTC(2026,10,30,18,0,0), SLUT=START+60*60*1000;
+  var TITEL='Gratis online event med Stefan – Håndværkerskolen';
+  var TEKST='Linket kommer på SMS, inden vi starter kl. 19:00. Det åbner i din browser. Se gerne med fra computeren.';
+
+  /* fornavn og nummer fra formularen (gemt lige før man blev sendt hertil) */
+  try{ var d=JSON.parse(sessionStorage.getItem('hs_tak')||'null');
+    if(d&&d.fornavn){ document.getElementById('h').innerHTML='Du er tilmeldt, <span class="acc"></span>'; document.querySelector('#h .acc').textContent=d.fornavn; }
+    if(d&&d.telefon){ document.getElementById('nr-t').textContent=d.telefon.replace(/^\+45(\d{2})(\d{2})(\d{2})(\d{2})$/,'+45 $1 $2 $3 $4'); document.getElementById('nr').hidden=false; }
+  }catch(e){}
+
+  /* nedtælling */
+  function to(n){ return (n<10?'0':'')+n; }
+  function tael(){ var t=START-Date.now();
+    if(t<=0){ document.getElementById('side').classList.add('igang'); return; }
+    var s=Math.floor(t/1000), dd=Math.floor(s/86400), tt=Math.floor(s%86400/3600), mm=Math.floor(s%3600/60), ss=s%60;
+    document.getElementById('n-d').textContent=dd; document.getElementById('n-t').textContent=to(tt);
+    document.getElementById('n-m').textContent=to(mm); document.getElementById('n-s').textContent=to(ss);
+    setTimeout(tael,1000-Date.now()%1000); }
+  tael();
+
+  /* kalender: Google, Outlook.com og en .ics-fil til Apple/Outlook med påmindelse 1 dag og 30 min før */
+  function z(ms){ return new Date(ms).toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,''); }
+  document.getElementById('k-google').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(TITEL)+
+    '&dates='+z(START)+'/'+z(SLUT)+'&details='+encodeURIComponent(TEKST)+'&location=Online';
+  document.getElementById('k-outlook').href='https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject='+encodeURIComponent(TITEL)+
+    '&startdt='+new Date(START).toISOString()+'&enddt='+new Date(SLUT).toISOString()+'&body='+encodeURIComponent(TEKST)+'&location=Online';
+  document.getElementById('k-ics').addEventListener('click',function(){
+    var ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Haandvaerkerskolen//Event//DA','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+      'UID:event-2026-11-30@haandvaerkerskolen.nu','DTSTAMP:'+z(Date.now()),'DTSTART:'+z(START),'DTEND:'+z(SLUT),
+      'SUMMARY:'+TITEL,'DESCRIPTION:'+TEKST.replace(/,/g,'\\,'),'LOCATION:Online',
+      'BEGIN:VALARM','TRIGGER:-P1D','ACTION:DISPLAY','DESCRIPTION:I morgen kl. 19: '+TITEL,'END:VALARM',
+      'BEGIN:VALARM','TRIGGER:-PT30M','ACTION:DISPLAY','DESCRIPTION:Om 30 minutter: '+TITEL,'END:VALARM',
+      'END:VEVENT','END:VCALENDAR'].join('\r\n');
+    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar;charset=utf-8'}));
+    a.download='haandvaerkerskolen-30-november.ics'; document.body.appendChild(a); a.click(); setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },500);
+    gemt(); });
+  ['k-google','k-outlook'].forEach(function(id){ document.getElementById(id).addEventListener('click',gemt); });
+  function gemt(){ document.getElementById('cal-ok').style.display='block';
+    try{ if(window.fbq) fbq('trackSingleCustom','1853802775977454','AddToCalendar'); }catch(e){} try{ if(window.clarity) clarity('event','kalender'); }catch(e){} }
+  var knap=document.getElementById('kal'), valg=document.getElementById('valg');
+  knap.addEventListener('click',function(){ var aaben=valg.classList.toggle('aaben'); knap.setAttribute('aria-expanded',aaben?'true':'false'); });
+})();
 </script>
 </body>
 </html>

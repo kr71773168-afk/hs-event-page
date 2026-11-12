@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/tak/", "destination": "/tak", "permanent": false },
+    { "source": "/okt/", "destination": "/okt", "permanent": false },
+    { "source": "/tak-okt/", "destination": "/tak-okt", "permanent": false }
+  ],
+  "headers": [
+    { "source": "/api/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }
+  ]
+}
