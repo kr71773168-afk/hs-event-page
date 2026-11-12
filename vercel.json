@@ -1,11 +1,49 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/tak/", "destination": "/tak", "permanent": false },
-    { "source": "/okt/", "destination": "/okt", "permanent": false },
-    { "source": "/tak-okt/", "destination": "/tak-okt", "permanent": false }
+    {
+      "source": "/tak/",
+      "destination": "/tak",
+      "permanent": false
+    },
+    {
+      "source": "/okt/",
+      "destination": "/okt",
+      "permanent": false
+    },
+    {
+      "source": "/tak-okt/",
+      "destination": "/tak-okt",
+      "permanent": false
+    },
+    {
+      "source": "/kalender/",
+      "destination": "/kalender",
+      "permanent": false
+    }
   ],
   "headers": [
-    { "source": "/api/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/kalender.ics",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/calendar; charset=utf-8"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "inline; filename=\"haandvaerkerskolen-30-november.ics\""
+        }
+      ]
+    }
   ]
 }

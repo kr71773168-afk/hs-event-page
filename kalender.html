@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sæt det i kalenderen – Håndværkerskolen</title>
+<!-- Meta Pixel: Online Event - Håndværkerskolen -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1853802775977454');fbq('trackSingle','1853802775977454','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1853802775977454&ev=PageView&noscript=1" alt=""></noscript>
+<link rel="icon" type="image/png" sizes="32x32" href="/billeder/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/billeder/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Anton&family=Archivo:wdth,wght@112,800&display=swap" rel="stylesheet">
+<style>
+/* KALENDERSIDEN (/kalender). Linket i bekræftelses-SMS'en peger hertil, og takkesiden sender iPhone-folk hertil fra
+   Facebook/Instagram, fordi de browsere ikke kan lægge en .ics-fil i kalenderen. SMS-links åbner i telefonens rigtige browser */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#06140F;color:#fff;font-family:'Barlow',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+svg{display:block}
+[hidden]{display:none!important}
+.side{position:relative;overflow:hidden;overflow:clip;isolation:isolate;min-height:100vh;padding:56px 18px 48px;text-align:center}
+.side::before{content:"";position:absolute;left:50%;top:-120px;width:720px;height:520px;transform:translateX(-50%);z-index:-1;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(45,90,61,.55),rgba(45,90,61,0))}
+.kol{max-width:460px;margin:0 auto}
+.ik{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(135deg,#C95A12,#F27628);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(242,118,40,.14)}
+.ik svg{width:30px;height:30px;color:#fff}
+h1{font-family:'Anton',sans-serif;font-weight:400;font-size:38px;line-height:1.14;letter-spacing:.3px;text-transform:uppercase}
+h1 .acc{color:#F27628}
+.sub{margin-top:10px;font-weight:600;font-size:16px;color:rgba(255,255,255,.72)}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:58px;margin-top:28px;border-radius:999px;text-decoration:none;
+  background:linear-gradient(90deg,#C95A12 0%,#F27628 100%);color:#fff;font-family:'Archivo',sans-serif;font-stretch:112%;font-weight:800;font-size:17px;letter-spacing:.4px;text-transform:uppercase}
+.cta svg{flex:none;width:22px;height:22px}
+.valg{display:flex;flex-direction:column;gap:1px;margin-top:28px;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.10);text-align:left}
+.valg a{display:flex;align-items:center;justify-content:space-between;padding:15px 16px;background:#0F241B;color:#fff;font-weight:600;font-size:16px;text-decoration:none}
+.valg span{color:rgba(255,255,255,.5);font-weight:500;font-size:13.5px}
+.alt{display:inline-block;margin-top:14px;padding:6px 2px;color:rgba(255,255,255,.62);font-weight:600;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.ok{margin-top:22px;padding:14px 16px;border-radius:12px;background:rgba(45,138,78,.10);box-shadow:inset 0 0 0 1px rgba(45,138,78,.42);font-weight:600;font-size:15px;line-height:1.45}
+.nb{margin-top:26px;font-weight:500;font-size:14.5px;line-height:1.45;color:rgba(255,255,255,.62)}
+.bund{margin-top:34px;font-weight:500;font-size:13px;color:rgba(255,255,255,.45)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-kalender" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></g></symbol>
+</svg>
+<main class="side">
+  <div class="kol">
+    <div class="ik" aria-hidden="true"><svg><use href="#i-kalender"/></svg></div>
+    <h1>Sæt det i <span class="acc">kalenderen</span></h1>
+    <p class="sub">Mandag 30. november kl. 19:00 · Online</p>
+    <a class="cta" id="a1" href="#"><svg aria-hidden="true"><use href="#i-kalender"/></svg><span id="a1-t">Sæt det i kalenderen</span></a>
+    <div class="valg" id="valg" hidden>
+      <a id="k-google" href="#" target="_blank" rel="noopener">Google Kalender <span>åbner Google</span></a>
+      <a id="k-ics" href="#">Apple eller Outlook <span>henter en kalenderfil</span></a>
+      <a id="k-outlook" href="#" target="_blank" rel="noopener">Outlook.com <span>åbner Outlook</span></a>
+    </div>
+    <a class="alt" id="alt" href="#" target="_blank" rel="noopener" hidden></a>
+    <p class="ok" id="tilbage" hidden>Tryk på <b>◀</b> øverst til venstre for at komme tilbage og gøre de sidste trin færdige.</p>
+    <p class="nb">Linket til eventet kommer på SMS, inden vi starter.</p>
+    <p class="bund">Håndværkerskolen</p>
+  </div>
+</main>
+<script>
+(function(){
+  var ICS_FIL='/kalender.ics';  /* produktion: '/kalender.ics' (text/calendar) */
+  var START=Date.UTC(2026,10,30,18,0,0), SLUT=START+60*60*1000;
+  var TITEL='Gratis online event med Stefan – Håndværkerskolen';
+  var TEKST='Linket kommer på SMS, inden vi starter kl. 19:00. Det åbner i din browser.';
+  var FILNAVN='haandvaerkerskolen-30-november.ics';
+  function z(ms){ return new Date(ms).toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,''); }
+  var GURL='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(TITEL)+'&dates='+z(START)+'/'+z(SLUT)+'&details='+encodeURIComponent(TEKST)+'&location=Online';
+  var OURL='https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject='+encodeURIComponent(TITEL)+
+    '&startdt='+new Date(START).toISOString()+'&enddt='+new Date(SLUT).toISOString()+'&body='+encodeURIComponent(TEKST)+'&location=Online';
+  var ua=navigator.userAgent||'';
+  var iOS=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var android=/Android/i.test(ua);
+  var fraApp=/[?&]fra=app\b/.test(location.search);
+  var A=document.getElementById('a1'), T=document.getElementById('a1-t'), ALT=document.getElementById('alt');
+  function spor(m){ try{ if(window.fbq) fbq('trackSingleCustom','1853802775977454','AddToCalendar',{metode:m,side:'kalender'}); }catch(e){} }
+  function efter(m){ spor(m); if(fraApp&&iOS) setTimeout(function(){ document.getElementById('tilbage').hidden=false; },800); }
+  if(iOS){ A.href=ICS_FIL; T.textContent='Tilføj til kalenderen';
+    ALT.textContent='Bruger du Google Kalender?'; ALT.href=GURL; ALT.hidden=false;
+    A.addEventListener('click',function(){ efter('apple'); }); ALT.addEventListener('click',function(){ efter('google'); }); }
+  else if(android){ A.href=GURL; A.target='_blank'; A.rel='noopener'; T.textContent='Tilføj til kalenderen';
+    ALT.textContent='Anden kalender? Hent kalenderfilen'; ALT.href=ICS_FIL; ALT.setAttribute('download',FILNAVN); ALT.removeAttribute('target'); ALT.hidden=false;
+    A.addEventListener('click',function(){ efter('google'); }); ALT.addEventListener('click',function(){ efter('ics'); }); }
+  else { A.hidden=true; document.getElementById('valg').hidden=false; }
+  document.getElementById('k-google').href=GURL; document.getElementById('k-outlook').href=OURL;
+  var ki=document.getElementById('k-ics'); ki.href=ICS_FIL; ki.setAttribute('download',FILNAVN);
+  [['k-google','google'],['k-ics','ics'],['k-outlook','outlook']].forEach(function(p){ document.getElementById(p[0]).addEventListener('click',function(){ efter(p[1]); }); });
+})();
+</script>
+</body>
+</html>

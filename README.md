@@ -22,7 +22,10 @@ GitHub Pages er stadig slået til med samme domæne, så gamle
 | Sti | Fil | Indhold |
 | --- | --- | --- |
 | `/` | `index.html` | Eventsiden til 30. november 2026. CSS og JS ligger i filen. |
-| `/tak` | `tak.html` | Takkesiden til 30. nov (nedtælling, "Sæt i kalenderen"). |
+| `/tak` | `tak.html` | Takkesiden til 30. nov: trin for trin (kalender → ordrebogs-tjek → Facebook-gruppe). |
+| `/kalender` | `kalender.html` | Kalendersiden (linket til bekræftelses-SMS'en). Vælger kalender efter enhed. |
+| `/kalender.ics` | `kalender.ics` | Kalenderfilen (serveres som `text/calendar`). |
+| `/api/tjek` | `api/tjek.js` | Svarene fra ordrebogs-tjekket → custom fields `fag`/`ansatte`/`booket` + note på GHL-kontakten. |
 | – | `billeder/` | Billeder til den nye side. |
 | `/api/tilmeld` | `api/tilmeld.js` | Serverfunktion: formular → GHL (upsert + tag `event-2026-11-30`) og Lead → Meta CAPI. |
 | `/okt` | `okt/index.html` | Den gamle eventside (2.–3. nov). Agencyflow-formularen ligger stadig her. Nødløsning. |

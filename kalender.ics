@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Haandvaerkerskolen//Event//DA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:event-2026-11-30@haandvaerkerskolen.nu
+DTSTAMP:20261112T205808Z
+DTSTART:20261130T180000Z
+DTEND:20261130T190000Z
+SUMMARY:Gratis online event med Stefan – Håndværkerskolen
+DESCRIPTION:Linket kommer på SMS\, inden vi starter kl. 19:00. Det åbner i din browser.
+LOCATION:Online
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:I morgen kl. 19: Gratis online event med Stefan
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Om 30 minutter: Gratis online event med Stefan
+END:VALARM
+END:VEVENT
+END:VCALENDAR
