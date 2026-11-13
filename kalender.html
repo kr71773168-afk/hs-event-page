@@ -86,15 +86,14 @@ h1 .acc{color:#F27628}
 </main>
 <script>
 (function(){
-  var ICS_FIL='/kalender.ics';  /* produktion: '/kalender.ics' (text/calendar) */
+  var ICS_FIL='https://www.addevent.com/event/3r103fvzz8n5+apple';   /* AddEvent: Apple/iCal (.ics). Eventet rettes ét sted i AddEvent */
   var START=Date.UTC(2026,10,30,18,0,0), SLUT=START+60*60*1000;
   var TITEL='Gratis online event med Stefan – Håndværkerskolen';
   var TEKST='Linket kommer på SMS, inden vi starter kl. 19:00. Det åbner i din browser.';
   var FILNAVN='haandvaerkerskolen-30-november.ics';
   function z(ms){ return new Date(ms).toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,''); }
-  var GURL='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(TITEL)+'&dates='+z(START)+'/'+z(SLUT)+'&details='+encodeURIComponent(TEKST)+'&location=Online';
-  var OURL='https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject='+encodeURIComponent(TITEL)+
-    '&startdt='+new Date(START).toISOString()+'&enddt='+new Date(SLUT).toISOString()+'&body='+encodeURIComponent(TEKST)+'&location=Online';
+  var GURL='https://www.addevent.com/event/3r103fvzz8n5+google';     /* AddEvent: Google Kalender */
+  var OURL='https://www.addevent.com/event/3r103fvzz8n5+outlookcom'; /* AddEvent: Outlook.com */
   var ua=navigator.userAgent||'';
   var iOS=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
   var android=/Android/i.test(ua);
