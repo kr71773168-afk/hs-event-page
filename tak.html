@@ -57,10 +57,10 @@ h1 .acc{color:#F27628}
 .kort h2{margin-top:4px;font-weight:700;font-size:22px;line-height:1.2}
 .ind{margin-top:6px;font-weight:500;font-size:15.5px;line-height:1.42;color:rgba(255,255,255,.72)}
 /* gruppe-preview: ligner et Facebook-kort, så man kan se, hvor man lander */
-.fbk{display:block;margin-top:16px;border-radius:14px;overflow:hidden;background:#fff;color:#1C1E21;text-decoration:none;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.fbk{display:block;margin-top:14px;border-radius:14px;overflow:hidden;background:#fff;color:#1C1E21;text-decoration:none;box-shadow:0 6px 24px rgba(0,0,0,.35)}
 .fbk img{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;background:#0F241B}
-.fbk-bund{display:flex;align-items:center;gap:11px;padding:12px 14px}
-.fbk-logo{flex:none;width:36px;height:36px;color:#0866FF}
+.fbk-bund{display:flex;align-items:center;gap:10px;padding:10px 14px}
+.fbk-logo{flex:none;width:30px;height:30px;color:#0866FF}
 .fbk-t{min-width:0}
 .fbk-t b{display:block;font-weight:700;font-size:15.5px;line-height:1.25}
 .fbk-t span{display:flex;align-items:center;gap:5px;margin-top:2px;font-weight:500;font-size:13.5px;color:#65676B}
@@ -118,27 +118,24 @@ h1 .acc{color:#F27628}
     <div class="ok" aria-hidden="true"><svg><use href="#tjek"/></svg></div>
     <h1 id="h">Du er <span class="acc">tilmeldt</span></h1>
     <p class="sub">Mandag 30. november kl. 19:00 · Online</p>
-    <p class="sms"><svg aria-hidden="true"><use href="#sms"/></svg><span id="sms-t">Linket kommer på SMS, inden vi starter. Det åbner i din browser.</span></p>
+    <p class="sms"><svg aria-hidden="true"><use href="#sms"/></svg><span id="sms-t">Linket kommer på SMS, inden vi starter.</span></p>
 
     <!-- TRIN 1: Facebook-gruppen. Billedet er gruppens forsidebillede (samme som delebilledet) -->
     <section class="kort">
       <span class="lbl">Trin 1</span>
-      <h2>Tilmeld dig den lukkede Facebook-gruppe</h2>
-      <p class="ind">Mød de andre, der er med mandag, og få tips fra Stefan op til eventet.</p>
+      <h2>Gå med i Facebook-gruppen</h2>
       <a class="fbk gr-link" href="#" target="_blank" rel="noopener" aria-label="Åbn Facebook-gruppen">
         <img src="/billeder/og-30-nov.jpg" width="1200" height="630" alt="Gruppens forsidebillede: Stefan. Start januar med en fyldt ordrebog.">
         <div class="fbk-bund"><svg class="fbk-logo" aria-hidden="true"><use href="#i-fb"/></svg>
-          <div class="fbk-t"><b>Online event | Start januar med en fyldt ordrebog</b><span><svg aria-hidden="true"><use href="#i-laas"/></svg>Privat gruppe · Håndværkerskolen</span></div></div>
+          <div class="fbk-t"><b>Facebook-gruppe</b><span><svg aria-hidden="true"><use href="#i-laas"/></svg>Privat · kun for tilmeldte</span></div></div>
       </a>
       <a class="cta gr-link" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg><span>Gå med i gruppen</span></a>
-      <p class="note">Linket til eventet kommer stadig på SMS, ikke i gruppen.</p>
     </section>
 
     <!-- TRIN 2: kalender. Knappen vælger selv efter telefon og browser (se scriptet) -->
     <section class="kort">
       <span class="lbl">Trin 2</span>
       <h2>Tilføj til kalenderen</h2>
-      <p class="ind">Så glemmer du det ikke.</p>
         <a class="cta" id="kal-a" href="#"><svg aria-hidden="true"><use href="#i-kalender"/></svg><span>Tilføj til kalenderen</span></a>
         <p class="note" id="kal-note" hidden></p>
         <div class="valg" id="kal-valg" hidden>
@@ -150,7 +147,7 @@ h1 .acc{color:#F27628}
         <div class="smaa"><a id="kal-alt" href="#" target="_blank" rel="noopener" hidden></a></div>
     </section>
 
-    <div class="husk"><svg aria-hidden="true"><use href="#i-gave"/></svg><p><b>Husk at være med live.</b> Det er kun dem, der er med live, der får optagelsen bagefter, og vi bygger deres hjemmeside gratis. Du betaler kun 99 kr./md. for domæne og hosting.</p></div>
+    <div class="husk"><svg aria-hidden="true"><use href="#i-gave"/></svg><p><b>Vær med live:</b> så får du optagelsen, og vi bygger din hjemmeside gratis (kun 99 kr./md. for domæne og hosting).</p></div>
 
     <p class="bund">Håndværkerskolen</p>
   </div>
@@ -171,7 +168,7 @@ h1 .acc{color:#F27628}
   var d=null; try{ d=JSON.parse(sessionStorage.getItem('hs_tak')||'null'); }catch(e){}
   if(d&&d.fornavn){ document.getElementById('h').innerHTML='Du er tilmeldt, <span class="acc"></span>'; document.querySelector('#h .acc').textContent=d.fornavn; }
   if(d&&d.telefon){ var t=document.getElementById('sms-t'); t.textContent='Linket kommer på SMS til '; var bb=document.createElement('b');
-    bb.textContent=d.telefon.replace(/^\+45(\d{2})(\d{2})(\d{2})(\d{2})$/,'+45 $1 $2 $3 $4'); t.appendChild(bb); t.appendChild(document.createTextNode(', inden vi starter. Det åbner i din browser.')); }
+    bb.textContent=d.telefon.replace(/^\+45(\d{2})(\d{2})(\d{2})(\d{2})$/,'+45 $1 $2 $3 $4'); t.appendChild(bb); t.appendChild(document.createTextNode(', inden vi starter.')); }
 
   /* Facebook-gruppen: billedet og knappen går begge til gruppen. Klik måles som FacebookGruppe (Meta Pixel) */
   [].forEach.call(document.querySelectorAll('.gr-link'),function(a){ a.href=GRUPPE_URL;
