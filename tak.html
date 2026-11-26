@@ -33,7 +33,7 @@ fbq('init','1853802775977454');fbq('trackSingle','1853802775977454','PageView');
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Anton&family=Archivo:wdth,wght@112,800&display=swap" rel="stylesheet">
 <style>
 /* TAKKESIDEN – simpel version: to trin, begge altid synlige (intet skjult, ingen statuslinje).
-   Trin 1: tilføj til kalenderen. Trin 2: tilmeld dig Facebook-gruppen (med logo og billede af gruppen). */
+   Trin 1: tilmeld dig Facebook-gruppen (med logo og billede af gruppen). Trin 2: tilføj til kalenderen. */
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#06140F;color:#fff;font-family:'Barlow',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 button,a{touch-action:manipulation}
@@ -120,9 +120,23 @@ h1 .acc{color:#F27628}
     <p class="sub">Mandag 30. november kl. 19:00 · Online</p>
     <p class="sms"><svg aria-hidden="true"><use href="#sms"/></svg><span id="sms-t">Linket kommer på SMS, inden vi starter. Det åbner i din browser.</span></p>
 
-    <!-- TRIN 1: kalender. Knappen vælger selv efter telefon og browser (se scriptet) -->
+    <!-- TRIN 1: Facebook-gruppen. Billedet er gruppens forsidebillede (samme som delebilledet) -->
     <section class="kort">
       <span class="lbl">Trin 1</span>
+      <h2>Tilmeld dig den lukkede Facebook-gruppe</h2>
+      <p class="ind">Mød de andre, der er med mandag, og få tips fra Stefan op til eventet.</p>
+      <a class="fbk gr-link" href="#" target="_blank" rel="noopener" aria-label="Åbn Facebook-gruppen">
+        <img src="/billeder/og-30-nov.jpg" width="1200" height="630" alt="Gruppens forsidebillede: Stefan. Start januar med en fyldt ordrebog.">
+        <div class="fbk-bund"><svg class="fbk-logo" aria-hidden="true"><use href="#i-fb"/></svg>
+          <div class="fbk-t"><b>Online event | Start januar med en fyldt ordrebog</b><span><svg aria-hidden="true"><use href="#i-laas"/></svg>Privat gruppe · Håndværkerskolen</span></div></div>
+      </a>
+      <a class="cta gr-link" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg><span>Gå med i gruppen</span></a>
+      <p class="note">Linket til eventet kommer stadig på SMS, ikke i gruppen.</p>
+    </section>
+
+    <!-- TRIN 2: kalender. Knappen vælger selv efter telefon og browser (se scriptet) -->
+    <section class="kort">
+      <span class="lbl">Trin 2</span>
       <h2>Tilføj til kalenderen</h2>
       <p class="ind">Så glemmer du det ikke.</p>
         <a class="cta" id="kal-a" href="#"><svg aria-hidden="true"><use href="#i-kalender"/></svg><span>Tilføj til kalenderen</span></a>
@@ -134,21 +148,6 @@ h1 .acc{color:#F27628}
         </div>
         <div class="hjaelp" id="kal-hjaelp" hidden></div>
         <div class="smaa"><a id="kal-alt" href="#" target="_blank" rel="noopener" hidden></a></div>
-    </section>
-
-
-    <!-- TRIN 2: Facebook-gruppen. Billedet er gruppens forsidebillede (samme som delebilledet) -->
-    <section class="kort">
-      <span class="lbl">Trin 2</span>
-      <h2>Tilmeld dig den lukkede Facebook-gruppe</h2>
-      <p class="ind">Mød de andre, der er med mandag, og få tips fra Stefan op til eventet.</p>
-      <a class="fbk gr-link" href="#" target="_blank" rel="noopener" aria-label="Åbn Facebook-gruppen">
-        <img src="/billeder/og-30-nov.jpg" width="1200" height="630" alt="Gruppens forsidebillede: Stefan. Start januar med en fyldt ordrebog.">
-        <div class="fbk-bund"><svg class="fbk-logo" aria-hidden="true"><use href="#i-fb"/></svg>
-          <div class="fbk-t"><b>Online event | Start januar med en fyldt ordrebog</b><span><svg aria-hidden="true"><use href="#i-laas"/></svg>Privat gruppe · Håndværkerskolen</span></div></div>
-      </a>
-      <a class="cta gr-link" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg><span>Gå med i gruppen</span></a>
-      <p class="note">Linket til eventet kommer stadig på SMS, ikke i gruppen.</p>
     </section>
 
     <div class="husk"><svg aria-hidden="true"><use href="#i-gave"/></svg><p><b>Husk at være med live.</b> Det er kun dem, der er med live, der får optagelsen bagefter, og vi bygger deres hjemmeside gratis. Du betaler kun 99 kr./md. for domæne og hosting.</p></div>
